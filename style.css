@@ -241,3 +241,44 @@ img { max-width: 100%; display: block; }
 /* ---------- Reveal on scroll ---------- */
 .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
 .reveal.in { opacity: 1; transform: none; }
+
+/* ---------- Hero split (image variant) ---------- */
+.hero__split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  max-width: var(--wrap);
+}
+.hero__content { max-width: 580px; }
+.hero__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.hero__image img {
+  width: 100%;
+  max-width: 560px;
+  border-radius: 16px;
+  filter: drop-shadow(0 32px 64px rgba(224,169,109,.18));
+}
+
+@media (max-width: 880px) {
+  .hero__split {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .hero__image {
+    order: -1;
+    max-height: 280px;
+    overflow: hidden;
+    border-radius: 12px;
+  }
+  .hero__image img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center top;
+    max-width: 100%;
+  }
+}
