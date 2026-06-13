@@ -255,23 +255,22 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
 }
 .hero__image img {
   width: 100%;
   max-width: 560px;
   border-radius: 16px;
-  filter: drop-shadow(0 32px 64px rgba(224,169,109,.18));
+  filter: drop-shadow(0 32px 64px rgba(13,27,42,.18));
 }
 
 @media (max-width: 880px) {
   .hero__split {
     grid-template-columns: 1fr;
-    gap: 36px;
+    gap: 32px;
   }
   .hero__image {
     order: -1;
-    max-height: 280px;
+    max-height: 260px;
     overflow: hidden;
     border-radius: 12px;
   }
@@ -282,3 +281,18 @@ img { max-width: 100%; display: block; }
     max-width: 100%;
   }
 }
+
+/* ---------- Hero light variant ---------- */
+.hero--light {
+  background: var(--paper);
+  color: var(--navy);
+}
+.hero--light::before { display: none; }
+.hero--light h1 { color: var(--navy); }
+.hero--light h1 em { color: var(--amber-deep); }
+.hero--light .hero__sub { color: var(--muted); }
+.hero--light .eyebrow { color: var(--amber-deep); }
+.hero--light .eyebrow::before { background: var(--amber-deep); }
+.hero--light .hero__note { color: var(--muted); }
+.hero--light .trust-row { color: var(--navy); }
+.hero--light .trust-row span { opacity: 1; color: var(--muted); }
