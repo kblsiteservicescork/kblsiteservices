@@ -501,3 +501,15 @@ blockquote cite { display: block; margin-top: 20px; font-style: normal; font-fam
 
 /* ---------- Audiences section ---------- */
 .audiences { background: var(--paper); }
+
+/* ---------- Logo image ---------- */
+.brand__logo {
+  height: 42px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+.brand__logo--footer {
+  height: 38px;
+  opacity: .85;
+}
